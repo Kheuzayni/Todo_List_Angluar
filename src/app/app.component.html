@@ -5,10 +5,10 @@
     <div class="col col-lg-3">
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Entrer votre tache"
-          aria-label="Entrer votre tache" aria-describedby="button-addon2"
+          aria-label="Entrer votre tache" aria-describedby="button-addon2" [(ngModel)] = "newTodo"
         >
         <button class="btn btn-outline-secondary btn-primary" type="button" 
-          id="button-addon2" style="color:white">Ajouter
+          id="button-addon2" style="color:white" (click)="enregistrerTache()">Ajouter
         </button>
       </div>
       <table class="table">
@@ -16,13 +16,12 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nom</th>
-            <th scope="col">Last</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let todo of todos; let i = index;">
-            <th scope="row"> i+1 </th>
+            <th scope="row"> {{i+1}} </th>
             <td>{{todo.name}}</td>
             <td style="color:red; font-weight:bold;">Supprimer</td>
           </tr>
