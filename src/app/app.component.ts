@@ -25,7 +25,7 @@ export class AppComponent {
     }
   }
 
-  done(id: number){
+  tacheDone(id: number){
     this.todos[id].isCompleted =! this.todos[id].isCompleted
   }
 
