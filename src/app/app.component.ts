@@ -25,8 +25,12 @@ export class AppComponent {
     }
   }
 
-  // done (id: number){
-  //   this.todos[id].isCompleted =! this.todos[id].isCompleted
-  // }
+  done(id: number){
+    this.todos[id].isCompleted =! this.todos[id].isCompleted
+  }
+
+  supprimerTache(id:number){
+    this.todos = this.todos.filter((v,i) => i !== id);
+  }
 
 }
